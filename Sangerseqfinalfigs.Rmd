@@ -1,0 +1,78 @@
+---
+title: "Sanger/MinION Final Figs"
+author: Austin Marshall IBB-PhD Student Clarkson University
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(sangerseqR)
+```
+
+
+#for the cultured samples
+```{r}
+
+setwd("/home/marshaag/sangerminion/sanger_colonies")
+
+a <- readsangerseq("AIR1_16F_BVAG69_1.ab1")
+chromatogram(a, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "21_7_27_colony1_FINAL.svg")
+  aseqbasecalls <- makeBaseCalls(a, ratio = 0.33)
+
+
+b <- readsangerseq("AIR3_16F_BVAG70_2.ab1")
+chromatogram(b, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "21_7_27_colony2_FINAL.svg")
+  bseqbasecalls <- makeBaseCalls(b, ratio = 0.33)
+
+c <- readsangerseq("RT1_16F_BVAG71_3.ab1")
+chromatogram(c, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "21_7_27_colony3_FINAL.svg")
+  cseqbasecalls <- makeBaseCalls(c, ratio = 0.33)
+  
+d <- readsangerseq("RT2_16F_BVAG72_4.ab1")
+chromatogram(d, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "21_7_21_colony4_FINAL.svg")
+  dseqbasecalls <- makeBaseCalls(d, ratio = 0.33)
+
+
+e <- readsangerseq("RT3_16F_BVAG73_5.ab1")
+chromatogram(e, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "21_7_21_colony5_FINAL.svg")
+  eseqbasecalls <- makeBaseCalls(e, ratio = 0.33)
+
+
+f <- readsangerseq("RT4_16F_BVAG74_6.ab1")
+chromatogram(f, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "21_7_21_colony6_FINAL.svg")
+  fseqbasecalls <- makeBaseCalls(f, ratio = 0.33)
+  
+g <- readsangerseq("RT_2_19_feb_16F_BVAG75_7.ab1")
+chromatogram(g, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "21_7_21_colony7_FINAL.svg")
+  gseqbasecalls <- makeBaseCalls(g, ratio = 0.33)
+```
+
+
+#for the pure control samples
+```{r}
+a <- readsangerseq("Abaum_16F_BVAG76_1.ab1")
+chromatogram(a, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "Abaum_pure_FINAL.pdf")
+  aseqbasecalls <- makeBaseCalls(a, ratio = 0.33)
+
+
+b <- readsangerseq("SandA90_16F_BVAG84_9.ab1")
+chromatogram(b, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "SandA90_pure_FINAL.pdf")
+  bseqbasecalls <- makeBaseCalls(b, ratio = 0.33)
+
+c <- readsangerseq("AandS50_16F_BVAG81_6.ab1")
+chromatogram(c, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "AandS50_pure_FINAL.pdf")
+  cseqbasecalls <- makeBaseCalls(c, ratio = 0.33)
+  
+d <- readsangerseq("AandS90_16F_BVAG82_7.ab1")
+chromatogram(d, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "AandS90_pure_FINAL.pdf")
+  dseqbasecalls <- makeBaseCalls(d, ratio = 0.33)
+
+
+e <- readsangerseq("Smal_16F_BVAG78_3.ab1")
+chromatogram(e, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "Smal_pure_FINAL.pdf")
+  eseqbasecalls <- makeBaseCalls(e, ratio = 0.33)
+
+
+```
+
