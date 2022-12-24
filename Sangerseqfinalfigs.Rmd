@@ -49,7 +49,7 @@ chromatogram(g, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "pr
 ```
 
 
-#for the pure control samples
+#for the mock colony samples
 ```{r}
 a <- readsangerseq("Abaum_16F_BVAG76_1.ab1")
 chromatogram(a, width = 85, height = 2, trim5 = 50, trim3 = 100, showcalls = "primary", filename = "Abaum_pure_FINAL.pdf")
